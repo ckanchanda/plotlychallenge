@@ -91,8 +91,8 @@ function buildCharts(sample) {
     };
     // 10. Use Plotly to plot the data with the layout.
     Plotly.newPlot("bar", [barData], barLayout);
-  });
-};
+ // });
+//};
 
 
 // Deliverable 2 BellyButton_Starter Code
@@ -100,7 +100,7 @@ function buildCharts(sample) {
 // Create the buildCharts function.
 //function buildCharts(sample) {
   // Use d3.json to load and retrieve the samples.json file 
-  d3.json("samples.json").then((data) => {
+  //d3.json("samples.json").then((data) => {
 
     // Deliverable 1 Step 10. Use Plotly to plot the data with the layout. 
     //Plotly.newPlot(); 
@@ -114,7 +114,7 @@ function buildCharts(sample) {
       marker: {
         size: sample_values,
         color: otu_ids,
-        colorscale: "PuRd"
+        colorscale: "Earth"
         },
     }];
 
@@ -127,6 +127,6 @@ function buildCharts(sample) {
     };
 
     // 3. Use Plotly to plot the data with the layout.
-    Plotly.newPlot("bubble", [bubbleData], bubbleLayout); 
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
   });
 };
