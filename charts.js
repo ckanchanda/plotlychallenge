@@ -53,7 +53,6 @@ function buildMetadata(sample) {
   });
 }
 
-
 // Deliverable 1
 // 1. Create the buildCharts function.
 function buildCharts(sample) {
@@ -96,30 +95,38 @@ function buildCharts(sample) {
 };
 
 
-
-
 // Deliverable 2 BellyButton_Starter Code
 // Bar and Bubble charts
 // Create the buildCharts function.
 //function buildCharts(sample) {
   // Use d3.json to load and retrieve the samples.json file 
-  //d3.json("samples.json").then((data) => {
-    
+  d3.json("samples.json").then((data) => {
 
     // Deliverable 1 Step 10. Use Plotly to plot the data with the layout. 
     //Plotly.newPlot(); 
 
     // 1. Create the trace for the bubble chart.
-    //var bubbleData = [
-   
-    //];
+    var bubbleData = [{
+      x: otu_ids,
+      y: sample_values,
+      text: otu_labels,
+      mode: "markers",
+      marker: {
+        size: sample_values,
+        color: otu_ids,
+        colorscale: "PuRd"
+        },
+    }];
 
     // 2. Create the layout for the bubble chart.
-    //var bubbleLayout = {
-      
-    //};
+    var bubbleLayout = {
+      title: "Bacteria Cultures per Sample",
+      xaxis: {title: "Bacterial ID"},
+      yaxis: {title: "Species Name"},
+      hovermode: "closest",
+    };
 
     // 3. Use Plotly to plot the data with the layout.
-    //Plotly.newPlot(); 
-  //});
-//}
+    Plotly.newPlot("bubble", [bubbleData], bubbleLayout); 
+  });
+};
