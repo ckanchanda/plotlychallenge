@@ -53,6 +53,8 @@ function buildMetadata(sample) {
   });
 }
 
+
+// Deliverable 1
 // 1. Create the buildCharts function.
 function buildCharts(sample) {
   // 2. Use d3.json to load and retrieve the samples.json file
@@ -89,7 +91,9 @@ function buildCharts(sample) {
       title: "Top 10 Bacteria Cultures Found"
     };
     // 10. Use Plotly to plot the data with the layout.
-    Plotly.newPlot("bar", barData, barLayout);
+    Plotly.newPlot("bar", [barData], barLayout);
+  });
+};
 
 
 
@@ -97,25 +101,25 @@ function buildCharts(sample) {
 // Deliverable 2 BellyButton_Starter Code
 // Bar and Bubble charts
 // Create the buildCharts function.
-function buildCharts(sample) {
+//function buildCharts(sample) {
   // Use d3.json to load and retrieve the samples.json file 
-  d3.json("samples.json").then((data) => {
+  //d3.json("samples.json").then((data) => {
     
 
     // Deliverable 1 Step 10. Use Plotly to plot the data with the layout. 
-    Plotly.newPlot(); 
+    //Plotly.newPlot(); 
 
     // 1. Create the trace for the bubble chart.
-    var bubbleData = [
+    //var bubbleData = [
    
-    ];
+    //];
 
     // 2. Create the layout for the bubble chart.
-    var bubbleLayout = {
+    //var bubbleLayout = {
       
-    };
+    //};
 
     // 3. Use Plotly to plot the data with the layout.
-    Plotly.newPlot(); 
-  });
-}
+    //Plotly.newPlot(); 
+  //});
+//}
