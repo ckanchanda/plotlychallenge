@@ -83,7 +83,12 @@ function buildCharts(sample) {
       text: otu_labels.slice(0,10).reverse(),
       y: yticks,
       type: "bar",
-      orientation: "h"
+      orientation: "h",
+      marker: {
+        size: sample_values,
+        color: otu_ids,
+        colorscale: "Picnic"
+        }
     };
     // 9. Create the layout for the bar chart.
     var barLayout = {
@@ -114,7 +119,7 @@ function buildCharts(sample) {
       marker: {
         size: sample_values,
         color: otu_ids,
-        colorscale: "Earth"
+        colorscale: "Rainbow"
         },
     }];
 
